@@ -1,0 +1,13 @@
+body {
+    background-image: url("./Homework 6/Tie\ Dye.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+.fontitle{
+    color:white;
+    font-family:'Times New Roman', Times, serif
+    }
+#externalid{
+    float:right;
+} 
