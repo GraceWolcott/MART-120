@@ -1,0 +1,140 @@
+<html>
+
+    <head>
+        <title>Page 4</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <script>
+            var actualAnswer;
+            var number1;
+            var number2;
+    
+            function printQuestion() {
+                for (var i = 0; i < 11; i++) {
+                    number1 = Math.floor(Math.random() * 50);
+                    number2 = Math.floor(Math.random() * 50);
+                    actualAnswer = number1 + number2;
+                    document.getElementById("theQuestion").innerHTML = "What is " + number1 + "+" + number2 + "?";
+                }
+            }
+    
+            function checkAnswer() {
+                var answer = document.getElementById("txtAnswer").value;
+                if (answer == actualAnswer) {
+                    document.getElementById("finalResult1").innerHTML = "<h3><span style='color: white;'>You got it chief!</span></h3>";
+                    printQuestion();
+                    document.getElementById("finalResult1").style.display = 'block';
+                    document.getElementById("finalResult2").style.display = 'none';
+                    
+                } else {
+                    document.getElementById("finalResult2").innerHTML = "<h3><span style='color: white;'>I don't think that's right pal.</span></h3>";
+                    document.getElementById("finalResult2").style.display = 'block';
+                    document.getElementById("finalResult1").style.display = 'none';
+
+                }
+            }
+            
+            function runGame() {
+                printQuestion();
+                document.getElementById("answersIncorrect").innerHTML = "<h4><span style='color: white;'>incorrect answers</span></h4>";
+                document.getElementById("answersCorrect").innerHTML = "<h4><span style='color: white;'>correct answers</span></h4>";
+            }
+            runGame();
+
+            var x = 0;
+            var number3;
+            function pleaseWork() {
+                for (var i = 0; i < 11; i++) {
+                    number3 = x + 1;
+                    document.getElementById("addition").innerHTML = number3
+                }
+            }
+        </script>
+    </head>
+    <body onload="runGame();">
+        <br />
+        <h1 class="fontitle"><center>But wait, there's more!</center></h1>
+        <h2 class="fontitle"><center>You've reached the super-secret bonus level. It's a math game if you feel so inclined...</center></h2>
+        <div>
+            <img src="./Homework 6/Doing Math.png"
+            width="604" height="1067"
+            style="position:absolute; top:180px; right:1280;">
+        </div>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div id="message"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3><div id="theQuestion" style="color:white; font-family:'Times New Roman', Times, serif; position:absolute; top:200; right:895; background-color: #3289fa;"></div></h3>
+                </td>
+            </tr>
+            <tr>
+                <td style="color:white; font-family:'Times New Roman', Times, serif; position:absolute; top:215; right:1000;"><h4>Your answer:</h4></td>
+                <td><input type="text" id="txtAnswer" style="position:absolute; top:237; right:810;"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnSubmit" onClick="checkAnswer(); pleaseWork();" style="position:absolute; top:270; right:922;">Submit</button></td>
+            </tr>
+        </table>
+        <div id="finalResult1" style="position:absolute; top:335; right:884; background-color: #23be30;"></div>
+        <div id="finalResult2" style="position:absolute; top:335; right:832; background-color: #cf2828;"></div>
+
+        <div id="answersCorrect" style="position:absolute; top:400; right:970;"></div>
+        <div id="answersIncorrect" style="position:absolute; top:400; right:810;"></div>
+
+        <h4 id="addition" style="color:white; font-family:'Times New Roman', Times, serif; position:absolute; top:435; right:865;"></h4>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 style="color:white; font-family:'Times New Roman', Times, serif;"><center>Want to go back?</center></h2>
+    <h3 style="color:white; font-family:'Times New Roman', Times, serif;"><center><a href="file:///C:/Users/Grace/Desktop/Spring%202021/Creative%20Coding/Homepage.html" target="_new">~travel back~</a></center></h3>
+    </body>
+</html>

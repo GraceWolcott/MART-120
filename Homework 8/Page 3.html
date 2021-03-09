@@ -1,0 +1,221 @@
+<html>
+
+    <head>
+        <title>Page 3</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <head>
+    <script>
+        function checkboxes()
+        {
+            var firstName = document.getElementById("fName").value;
+            if(firstName == "")
+            {
+                document.getElementById("fName").focus();
+                document.getElementById("fName").style.backgroundColor = "#3289fa";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "white";
+
+                return false;
+            }
+           
+        }
+        function checkboxes2()
+        {
+            var lastName = document.getElementById("lname").value;
+            if(lastName == "")
+            {
+                document.getElementById("lname").focus();
+                document.getElementById("lname").style.backgroundColor = "#3289fa";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "white";
+
+                return false;
+            }
+           
+        }
+        function checkboxes3()
+        {
+            var emailAddress = document.getElementById("email").value;
+            if(emailAddress == "")
+            {
+                document.getElementById("email").focus();
+                document.getElementById("email").style.backgroundColor = "#3289fa";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "white";
+
+                return false;
+            }
+           
+        }
+        function checkboxes4()
+        {
+            var agreeDisagree = document.getElementById("agree").value;
+            if(agreeDisagree == "Yes")
+            {
+                return true;
+            }
+            else
+            {
+                document.getElementById("agree").focus();
+                document.getElementById("agree").style.backgroundColor = "#3289fa";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "white";
+
+                return false;
+            }
+
+        }
+        function turnWhite1()
+        {
+                document.getElementById("fName").style.backgroundColor = "#ffffff";
+                document.getElementById("fNameMessage").innerHTML = "";
+                document.getElementById("fName").blur();
+
+                return false;
+            }
+        function turnWhite2()
+        {
+                document.getElementById("lname").style.backgroundColor = "#ffffff";
+                document.getElementById("fNameMessage").innerHTML = "";
+                document.getElementById("lname").blur();
+
+                return false;
+            }
+        function turnWhite3()
+        {
+                document.getElementById("email").style.backgroundColor = "#ffffff";
+                document.getElementById("fNameMessage").innerHTML = "";
+                document.getElementById("email").blur();
+
+                return false;
+            }
+        function turnWhite4()
+        {
+                document.getElementById("agree").style.backgroundColor = "#ffffff";
+                document.getElementById("fNameMessage").innerHTML = "";
+                document.getElementById("agree").blur();
+
+                return false;
+            }
+
+        function validateMyForm1()
+        {
+            var firstname = document.getElementById("fName").value;
+            if(firstname == "")
+            { 
+                alert("First name, last name, email, and terms of service are required.");
+                
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateMyForm2()
+        {
+            var lastName = document.getElementById("lname").value;
+            if(lastName == "")
+            { 
+                alert("First name, last name, email, and terms of service are required.");
+                
+                return false;
+            }
+
+            return true;
+        }
+        function validateMyForm3()
+        {
+            var emailAddress = document.getElementById("email").value;
+            if(emailAddress == "")
+            { 
+                alert("First name, last name, email, and terms of service are required.");
+                
+                return false;
+            }
+
+            return true;
+        }
+        function validateMyForm4()
+        {
+            var termsofs = document.getElementById("agree").value;
+            if(termsofs == "")
+            { 
+                alert("First name, last name, email, and terms of service are required.");
+                
+                return false;
+            }
+
+            return true;
+        }
+        
+    </script>
+        <style>
+            .fontpink{
+                color:white;
+                background-color:#f062a9;
+                padding-right: 100px;
+                font-family:'Times New Roman', Times, serif
+             }
+             .fontred{
+                color:white;
+                background-color:#cf2828;
+                padding-left: 100px;
+                font-family:'Times New Roman', Times, serif
+             }
+        </style>
+    <body>
+        <br />
+        <br />
+        <h2 class="fontitle"><b><center>I'm afraid that you've reached the end, but your journey is not over.</center></b></h2>
+        <h4 class="fontitle"><b><center>Now that you've learned about me, I want to learn about you! If you'd like, please fill out the form below...</center></b></h4>
+        <h2 class="fontitle"><b><center>Contact Me</center></b></h2>
+            <form action="mailto:gedogg421@gmail.com" method="post" enctype="text/plain" onsubmit="return validateMyForm1(); validateMyForm2(); validateMyForm3(); validateMyForm4();">
+                <center><p class="fontred">First Name: <input type="text" id="fName" onchange='turnWhite1();'><span id="fNameMessage"></span></center></p>
+                <center><p class="fontpink">Last Name: <input type="text" id="lname" onchange='turnWhite2();'><span id="fNameMessage"></span></center></p>
+                <center><p class="fontred">Email: <input type="text" id="email" onchange='turnWhite3();'><span id="fNameMessage"></span></center></p>
+                <center><p class="fontpink">Favorite Food: <input type="text"></center></p>
+                <center><p class="fontred">Food you hate: <input type="text"></center></p>
+                <center><p class="fontpink">Favorite font: <input type="text"></center></p>
+                <center><p class="fontred">Favorite prime number: <input type="text"></center></p>
+                <center><p class="fontpink">Favorite color: <input type="text"></center></p>
+                <center><p class="fontred">Favorite movie: <input type="text"></center></p>
+                <center><p class="fontpink">Song you despise: <input type="text"></center></p>
+                <center><p class="fontred">Song you love: <input type="text"></center></p>
+                <center><p class="fontitle" style="color:white;">Do you agree to the terms of service?</p></center>
+                <center><p style="color:white; font-family:'Times New Roman', Times, serif">Yes (case sensitive)<input type="text" id="agree" onchange='turnWhite4();'></p></center>
+                <center><button id="btnSubmit" class="btn btn-success" onclick='checkboxes(); checkboxes2(); checkboxes3(); checkboxes4();'>Submit My Info</button></center>
+            </form>
+            <h3 class="fontitle" style="position:absolute; top:835px; left:855px"><b>Terms of Service</b></h3>
+            <p class="fontitle" style="position:absolute; top:880px; left:790px; font-size: xx-small;">By agreeing to the terms of service, you willingly and legally sign over your firstborn child,</p>
+            <p class="fontitle" style="position:absolute; top:895px; left:790px; font-size: xx-small;">house, car, pets, plants, and marbles. You are also required to provide Grace with your social</p>
+            <p class="fontitle" style="position:absolute; top:910px; left:790px; font-size: xx-small;">security number, credit card information, and bank login information. This is no questions asked</p>
+            <p class="fontitle" style="position:absolute; top:925px; left:790px; font-size: xx-small;">of course. By agreeing, you also consent to the data-mining and selling of your personal information</p>
+            <p class="fontitle" style="position:absolute; top:940px; left:790px; font-size: xx-small;">to third parties. Additionally, you legally consent to the collection of your genetic information</p>
+            <p class="fontitle" style="position:absolute; top:955px; left:790px; font-size: xx-small;">and ancestral history from any DNA testing websites you may have used, or will use. </p>
+
+            <img src="./Homework 6/Lean Edited Flip.png" alt="This is me."
+                width="692" height="512" style="position:absolute; top:168px; right:50px">
+            <img src="./Homework 6/Lean Edited 2.png" alt="This is me."
+                width="692" height="512" style="position:absolute; top:168px; left:50px">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h4 class="fontitle"><b><center>Want to go back?</center></b></h4>
+            <p class="fontitle"><center><b><a href="file:///C:/Users/Grace/Desktop/Spring%202021/Creative%20Coding/Homepage.html" target="_new" style="color:indigo; font-family:'Times New Roman', Times, serif">~travel back~</a></b></center></p>
+            <br />
+            <br />
+            <h4 class="fontitle"><b><center>Definitely not a top secret bonus level...</center></b></h4>
+            <p class="fontitle"><center><b><a href="file:///C:/Users/Grace/Desktop/Spring%202021/Creative%20Coding/Page 4.html" target="_new" style="color:indigo; font-family:'Times New Roman', Times, serif">~you've peaked my interest~</a></b></center></p>
+            <br />
+            <br />
+            <br />
+            <br />
+    </body>
+</html>
