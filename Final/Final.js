@@ -556,7 +556,4 @@ function whiteRect() {
   pop();
   
   angle = angle + 1;
-  
-  fill(255, 60, 100);
-  text("(" + mouseX + ", " + mouseY + ")", mouseX, mouseY);
 }
